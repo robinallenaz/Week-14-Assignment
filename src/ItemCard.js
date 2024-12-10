@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 function ItemCard({ task, editTask, removeTask }) {
   const [isEditing, setIsEditing] = useState(false);
   const [editedTitle, setEditedTitle] = useState(task.title);
+  const [isCompleted, setIsCompleted] = useState(task.completed);
+  const [isShrinking, setIsShrinking] = useState(false);
 
   const handleEdit = () => {
     if (isEditing) {
@@ -11,8 +13,23 @@ function ItemCard({ task, editTask, removeTask }) {
     setIsEditing(!isEditing);
   };
 
+  const handleCheckboxChange = () => {
+    if (!isCompleted) {
+      setIsCompleted(true);
+      setIsShrinking(true);
+      setTimeout(() => {
+        removeTask(task.id);
+      }, 2000);
+    }
+  };
+
   return (
-    <div className="item-card">
+    <div className={`item-card ${isShrinking ? 'shrink-fade' : ''}`}>
+      <input
+        type="checkbox"
+        checked={isCompleted}
+        onChange={handleCheckboxChange}
+      />
       {isEditing ? (
         <input
           type="text"

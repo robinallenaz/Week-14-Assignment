@@ -75,3 +75,18 @@ button:hover {
   background-color: #0056b3;
   transform: translateY(-2px);
 }
+
+.shrink-fade {
+  animation: shrinkFadeOut 1s forwards;
+}
+
+@keyframes shrinkFadeOut {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
