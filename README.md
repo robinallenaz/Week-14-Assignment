@@ -40,16 +40,3 @@ This is a simple CRUD to-do application built with React. It allows users to man
 
 - Display a list of tasks with their completion status.
 - Modular React components for easy maintenance and scalability.
-
-## Future Enhancements
-
-- Add functionality to add, edit, and delete tasks.
-- Implement state management to handle dynamic updates.
-
-## Contributing
-
-Feel free to fork the repository and submit pull requests. For major changes, please open an issue first to discuss what you would like to change.
-
-## License
-
-This project is licensed under the MIT License.
