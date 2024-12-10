@@ -35,8 +35,3 @@ This is a simple CRUD to-do application built with React. It allows users to man
    ```
 
 5. **Open your browser** and navigate to `http://localhost:3000` to see the app in action.
-
-## Features
-
-- Display a list of tasks with their completion status.
-- Modular React components for easy maintenance and scalability.
